@@ -3,7 +3,7 @@ package Giris;
 import java.util.Scanner;
 
 public class HesapMakinesi {
-    //Java koşullu ifadeler ile basit hesap makinesi yapımı
+    //Java koşullu ifadeler ile basit hesap makinesi yapımı.
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.print("enter number1:");
