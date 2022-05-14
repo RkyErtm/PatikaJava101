@@ -1,7 +1,7 @@
 package Giris;
 
 public class PalindromikKelime {
-//kelime okunuşu sondan ve baştan aynı olma durumu.
+//kelime okunuşu sondan ve baştan aynı olma durumu...
     static boolean isPalindrome(String str){
         int i=0;
         int j=str.length()-1;
