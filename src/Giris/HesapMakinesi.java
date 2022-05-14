@@ -38,15 +38,17 @@ public class HesapMakinesi {
                         System.out.println("Sıfıra bölünemez");
                     }
                     break;
+                    
+            }
+            if (secim < 0 || secim > 4) {
+                System.out.println("Geçerli bir değer giriniz.");
             }
 
         } catch (ArithmeticException a) {
             System.out.println("sıfıra bölünme hatası.");
             System.out.println(a.getMessage());
         }
-        if (secim < 0 || secim > 4) {
-            System.out.println("Geçerli bir değer giriniz.");
-        }
+
 
 
     }
