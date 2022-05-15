@@ -3,60 +3,42 @@ package Giris;
 import java.util.Scanner;
 
 public class KullaniciGiris {
+        /*
+              -KullaniciAdi ve Şifre Belirle.
+              -3 hakkı var.
+              -Yanlış girdiği sürece hak azalacak.
+              -Doğru girince başrarılı mesaşı gelecek.
+         */
     public static void main(String[] args) {
-        String userName,password;
-        Scanner scan=new Scanner(System.in);
 
+        Scanner scan = new Scanner(System.in);
+        String userName="Rky",password="123";
 
-        int girisHakki=3;
-        boolean check;
+        int tryy=3,stry=3;
+        for (int i = 0; i < tryy ; i++) {
 
-        for(int i=0;i<=girisHakki;i++){
-            System.out.print("enter username: ");
-            userName=scan.next();
+            System.out.print("enter username:");
+            String n=scan.next();
             System.out.print("enter password:");
-            password=scan.next();
-            if (userName.equals("Rky")&&password.equals("123")){
-                check=true;
-                System.out.println("Tebrikler giriş yapıldı!");
+
+            String p=scan.next();
+
+            if (n.equals(userName)&&p.equals(password)){
+                System.out.println("Tebrikler giriş yaptınız.");
                 break;
             }
             else{
-                System.out.println("Hatalı giriş...");
-                    System.out.println("Şifreyi sıfırlamak istiyor musunuz?\n1-Evet\n2-Hayır");
-                    int yanit=scan.nextInt();
-                    if (yanit==1){
-                        System.out.print("Yeni şifre oluşturun: ");
-                        String newPass=scan.next();
-                        if (newPass!=password){
-                            System.out.println("Şifre oluşturuldu.");
-
-                            check=true;
-                            girisHakki--;
-                            //break;
-                        } else if (newPass==password) {
-                            System.out.println("şifre oluşturulamadı.");
-                        }
-                    }
-                    else{
-                        System.out.println("çıkış yapılıyor...");
-                        break;
-                    }
-                }
+                System.out.println("Hatalı Giriş");
+                stry--;
+                System.out.println("kalan hakkınız: "+stry);
             }
-        }
-        /*
-        if (userName.equals("Rky")&&password.equals("123")){
-            check=true;
-            System.out.println("Tebrikler giriş yapıldı!");
-        }
-        else{
-            check=false;
-            System.out.println("Hatalı giriş!");
-            if(check=false){
-                System.out.println("Şifre sıfırlansın mı?");
-
+            if (i==3){
+                System.out.println("giriş hakkınız bitmiştir.");
+                System.out.println("kalan giriş hakkınız: "+stry);
+                System.out.println("Çıkış yapılıyor...");
+                break;
             }
-        }*/
+        }   //Kalan hakkı tryy'da azaltınca döngüyüde azaltmış oluyorum. başka türlü nasıl gösteririm bilemedim.
     }
+}
 
