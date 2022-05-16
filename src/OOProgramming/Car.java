@@ -1,27 +1,46 @@
 package OOProgramming;
 
-class Car {
-        //Nitelikler
-        String type;
-        String model;
-        String color;
-        int speed;
-        int speedLimit=180;
+public class Car {
+    // nitelikler
+    String type;
+    String model;
+    String color;
+    int speed;
 
-      //Davranışlar
-      void increaseSpeed(int increament){
-              if ((speed+increament)<speedLimit){
-                      speed+=increament;
-              }
-      }
+    // Constructor (Kurucu) Metot
+    Car(String type, String model, String color) {
+        this.type = type;
+        this.model = model;
+        this.color = color;
+        this.speed = 0;
+    }
 
-      void decreaseSpeed(int decrease){
-              if (speed>0){
-                      speed-=decrease;
-              }
-      }
+    Car(){
+        System.out.println("Boş Yapıcı Metot");
+    }
 
-      void printSpeed(){
-              System.out.println("Hızınız: "+speed);
-      }
+    // davranışlar
+    int increaseSpeed(int increment) {
+        speed += increment;
+        return speed;
+    }
+
+    int decreaseSpeed(int decrease) {
+        if (speed > 0) {
+            speed -= decrease;
+        }
+        return speed;
+    }
+
+    void printSpeed() {
+        System.out.println("Speed : " + speed);
+    }
+
+    void printInfo() {
+        System.out.println("================");
+        System.out.println("Model  : " + this.model);
+        System.out.println("Color  : " + this.color);
+        System.out.println("Type  : " + this.type);
+        System.out.println("Speed  : " + this.speed);
+    }
 }
