@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class KullaniciGiris {
         /*
-              -KullaniciAdi ve Şifre Belirle.
+              -KullaniciAdi ve Şifre Belirle..
               -3 hakkı var.
               -Yanlış girdiği sürece hak azalacak.
               -Doğru girince başrarılı mesaşı gelecek.
